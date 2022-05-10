@@ -41,7 +41,9 @@ export const ContactsTable = ({ data, dataViewMode }) => {
                 <TableCell>
                   <Avatar alt="avatar" src={contact.picture.thumbnail} />
                 </TableCell>
-                <TableCell></TableCell>
+                <TableCell>
+                  {contact.name.title} {contact.name.first} {contact.name.last}
+                </TableCell>
                 <TableCell>
                   <Typography>
                     {format(new Date(contact.dob.date), "MM/dd/yyyy")}
